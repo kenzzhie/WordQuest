@@ -124,27 +124,27 @@ class _LeaderboardState extends State<Leaderboard> {
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: leaderProfile(4, 'username', '1000 points'),
+                child: leaderProfile(5, 'username', '1000 points'),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: leaderProfile(4, 'username', '1000 points'),
+                child: leaderProfile(6, 'username', '1000 points'),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: leaderProfile(4, 'username', '1000 points'),
+                child: leaderProfile(7, 'username', '1000 points'),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: leaderProfile(4, 'username', '1000 points'),
+                child: leaderProfile(8, 'username', '1000 points'),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: leaderProfile(4, 'username', '1000 points'),
+                child: leaderProfile(9, 'username', '1000 points'),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: leaderProfile(4, 'username', '1000 points'),
+                child: leaderProfile(10, 'username', '1000 points'),
               ),
             ],
           ),
