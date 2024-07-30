@@ -71,7 +71,7 @@ class _LeaderboardState extends State<Leaderboard> {
                         ),
                       )),
                   Text(
-                    'Leaderboards',
+                    'Leaderboard',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: AppColors.b,
