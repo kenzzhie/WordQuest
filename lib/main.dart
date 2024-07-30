@@ -173,40 +173,46 @@ class _GameScreenState extends State<GameScreen> {
 
     await showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Center(child: Text(title)),
-        content: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Center(
-                  child: Text(
-                content,
-              )),
-              if (gameWon) ...[
-                const SizedBox(height: 8),
-                Center(
-                  child: Text(
-                    'Meaning: $meaning',
-                    style: TextStyle(fontStyle: FontStyle.italic),
+      builder: (context) => Center(
+        child: Container(
+          margin: EdgeInsets.all(20),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: EdgeInsets.all(20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                ),
-              ],
-            ],
-          ),
-        ),
-        actions: [
-          Align(
-            alignment: Alignment.center,
-            child: TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                _resetGame(); // Reset the game when the dialog is dismissed
-              },
-              child: Text('Continue'),
+                  SizedBox(height: 20),
+                  Text(content),
+                  if (gameWon) ...[
+                    SizedBox(height: 8),
+                    Text(
+                      'Meaning: $meaning',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ],
+                  SizedBox(height: 20),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      _resetGame(); // Reset the game when the dialog is dismissed
+                    },
+                    child: Text('Continue'),
+                  ),
+                ],
+              ),
             ),
           ),
-        ],
+        ),
       ),
     );
   }
